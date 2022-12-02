@@ -3,6 +3,7 @@
 }
 
 .linkbar{
+    position: relative;
     display: flex;
     flex-direction: row;
     background-color: darkslategray;
@@ -21,6 +22,30 @@
 .welcometext{
     margin-left: 1rem;
 }
+.dropbtn:hover{
+    display: block;
+}
+.drop-content{
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+    margin-top: 2.5rem;
+}
+.drop-content a{
+    color: white;
+   padding: 10px 16px;
+   padding-top: 0%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+.dropbox:hover .drop-content{
+    display: flex;
+    flex-direction: column;
+}
+
 .heading{
     align-items: center;
     text-align: center;
@@ -66,7 +91,7 @@
 }
 .sidebar{
     flex: 30%;
-    background: lightgreen;
+    background: green;
     padding: 20px;
 }
 .main{
@@ -84,6 +109,9 @@
 @media screen and (max-width:700px) {
     .linkbar,.heading,.row{
         flex-direction: column;
+    }
+    .drop-content{
+        align-self: center;
     }
     .welcometext{
         margin-left: 0rem;
