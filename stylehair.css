@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+
+.linkbar{
+    display: flex;
+    flex-direction: row;
+    background-color: darkslategray;
+    
+}
+.linkbar a{
+    text-decoration: none;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+}
+.linkbar a:hover,.footerbar a:hover, .sidebar a:hover{
+    background-color: #ddd;
+    color: black;
+}
+.welcometext{
+    margin-left: 1rem;
+}
+.heading{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #1abc9c;
+    color: white;
+    font-family:cursive;
+ }
+  .heading img{
+    float: left;
+}
+.footerbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 20px;
+    justify-content: center;
+    background: darkslategray;
+}
+.footerbar a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding: 14px 20px;
+}
+.sidebar{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: darkslategray;
+}
+.sidebar a{
+ text-decoration: none;
+ color: white;
+ padding: 14px 20px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sidebar{
+    flex: 30%;
+    background: lightgreen;
+    padding: 20px;
+}
+.main{
+    flex: 70%;
+    background: linear-gradient(to top, transparent 0%, #000000bd 70%, #000000 95%),url("saloonshop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: white;
+}
+.main p{
+    line-height: 1.5;
+}
+
+@media screen and (max-width:700px) {
+    .linkbar,.heading,.row{
+        flex-direction: column;
+    }
+    .welcometext{
+        margin-left: 0rem;
+    }
+}
