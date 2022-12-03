@@ -96,7 +96,7 @@
 }
 .main{
     flex: 70%;
-    background: linear-gradient(to top, transparent 0%, #000000bd 70%, #000000 95%),url("saloonshop.jpg");
+    background: linear-gradient(to top, transparent 0%, #000000bd 70%, #000000 95%),url("salonshop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 20px;
