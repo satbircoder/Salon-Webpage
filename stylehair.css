@@ -3,10 +3,11 @@
 }
 
 .linkbar{
+    position: relative;
     display: flex;
     flex-direction: row;
     background-color: darkslategray;
-    
+
 }
 .linkbar a{
     text-decoration: none;
@@ -21,6 +22,30 @@
 .welcometext{
     margin-left: 1rem;
 }
+.dropbtn:hover{
+    display: block;
+}
+.drop-content{
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+    margin-top: 2.5rem;
+}
+.drop-content a{
+    color: white;
+   padding: 10px 16px;
+   padding-top: 0%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+.dropbox:hover .drop-content{
+    display: flex;
+    flex-direction: column;
+}
+
 .heading{
     align-items: center;
     text-align: center;
@@ -42,6 +67,7 @@
     padding: 20px;
     justify-content: center;
     background: darkslategray;
+    
 }
 .footerbar a{
     text-decoration: none;
@@ -53,7 +79,9 @@
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background: darkslategray;
+    flex: 30%;
+    padding: 20px;
+    background: green;
 }
 .sidebar a{
  text-decoration: none;
@@ -64,14 +92,12 @@
     display: flex;
     flex-wrap: wrap;
 }
-.sidebar{
-    flex: 30%;
-    background: lightgreen;
-    padding: 20px;
-}
 .main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     flex: 70%;
-    background: linear-gradient(to top, transparent 0%, #000000bd 70%, #000000 95%),url("saloonshop.jpg");
+    background: linear-gradient(to top, transparent 0%, #000000bd 70%, #000000 95%),url("salonshop.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 20px;
@@ -80,12 +106,87 @@
 .main p{
     line-height: 1.5;
 }
+.formbox{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 2rem;
+}
+
+form{
+    display: inline-block;
+    border: solid;
+    border-radius: 10px;
+    width: auto;
+}
+.labelcontainer{
+    display: flex;
+    flex-direction: column;
+    flex: 25%;
+    text-align: right;
+   
+}
+.inputcontainer{
+    display: flex;
+    flex-direction: column;
+    flex: 75%;
+    
+}
+ .labelcontainer label{
+    padding: 5px 5px;
+    margin-top: 5px;
+    
+ }
+ .inputcontainer input {
+    padding: 5px 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+ }
+  .inputcontainer input[type=text],[type=email],textarea{
+    width: 75%;
+  }
+ .checkboxcontainer{
+    display: inline-block;
+    border: solid;
+    padding: 5px 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 75%;
+}
+.sendmessage{
+    background-color: #24A0ED;
+    border: none;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 12px 16px;
+    width: 150px;
+    justify-content: center;
+    color: white;
+}
+.button{
+    display: flex;
+    flex-direction: row;
+    align-items:baseline
+    
+}
+
 
 @media screen and (max-width:700px) {
-    .linkbar,.heading,.row{
+    .linkbar,.heading,.row,.formbox,.button{
         flex-direction: column;
+    }
+    .drop-content{
+        align-self: center;
+    }
+   
+    .sidebar{
+        align-items: center;
     }
     .welcometext{
         margin-left: 0rem;
     }
+    .labelcontainer label{
+        text-align: left;
+    }
+    
 }
